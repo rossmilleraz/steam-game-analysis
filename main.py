@@ -5,10 +5,10 @@ def main():
     print("Cleaning Steam data...")
     clean_steam_data()
 
-    print("Creating summary tables...")
+    print("Creating summary tables.")
     create_summary_tables()
 
-    print("Creating charts...")
+    print("Creating charts.")
     create_charts()
 
     print("Project finished.")
