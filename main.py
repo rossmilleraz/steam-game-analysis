@@ -1,17 +1,22 @@
 # This file runs the whole project from start to finish.
 # One main file so I do not have to run every script manually
 
+from src.clean_data import clean_steam_data
+from src.analyze_data import analyze_steam_data
+from src.make_charts import make_charts
+
+
 def main():
-    print("Cleaning Steam data...")
+    print("Cleaning data...")
     clean_steam_data()
 
-    print("Creating summary tables.")
-    create_summary_tables()
+    print("Analyzing data...")
+    analyze_steam_data()
 
-    print("Creating charts.")
-    create_charts()
+    print("Making charts...")
+    make_charts()
 
-    print("Project finished.")
+    print("Done.")
 
 
 if __name__ == "__main__":
