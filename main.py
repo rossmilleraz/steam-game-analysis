@@ -3,7 +3,9 @@
 
 from src.clean_data import clean_steam_data
 from src.analyze_data import analyze_steam_data
-from src.make_charts import make_charts
+
+# Keeping it here because I want to keep the code, but I stopped using the make_charts.py and used notebooks instead
+# from src.make_charts import make_charts
 
 
 def main():
@@ -14,7 +16,7 @@ def main():
     analyze_steam_data()
 
     print("Making charts...")
-    make_charts()
+    # make_charts()
 
     print("Done.")
 
