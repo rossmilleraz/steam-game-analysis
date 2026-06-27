@@ -66,6 +66,11 @@ def clean_steam_data():
     for column in number_columns:
         df[column] = pd.to_numeric(df[column], errors="coerce")
 
+    # Some games use negative values to mean the review data is unavailable.
+    # Replace those values with missing values so they don't affect calculations.
+    df.loc[df["total_reviews"] < 0, "total_reviews"] = pd.NA
+    df.loc[df["review_pct"] < 0, "review_pct"] = pd.NA
+
     # This dataset stores review percentage as 0-100.
     # I changed it to 0-1 because that is easier to chart.
     df["review_pct"] = df["review_pct"] / 100
