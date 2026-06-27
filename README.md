@@ -2,54 +2,74 @@
 
 ## Executive Summary
 
-This project explores the Steam Games dataset to identify the characteristics that separate top-performing games from the rest of the market. The goal is to uncover trends in pricing, genres, player engagement, and review scores that could help developers and publishers better understand what contributes to a game's success on Steam.
+I wanted to see what separates successful Steam games from the thousands of other games on the platform. Instead of looking at one factor like price or review score, I wanted to compare several different metrics to see if there were any patterns.
+
+The idea is to answer a question that could be useful to developers or publishers before releasing a game.
 
 ## Business Problem
 
-Thousands of games are released on Steam every year, making it difficult for developers and publishers to understand what factors contribute to strong performance. The central question this project addresses is:
+Thousands of games are available on Steam, but only a small percentage become really successful. Pricing, genre, popularity, and player engagement all seem important, but it's not always clear which factors matter the most.
+
+This project tries to answer one main question:
 
 **What characteristics separate top-performing Steam games from the rest of the market?**
 
+## Success Metrics
+
+Instead of using just one number, I'm looking at several measurements of success.
+
+* Positive review percentage
+* Total reviews
+* Estimated owners
+* Peak concurrent players
+* Average playtime
+
+Looking at multiple metrics should give a better picture than relying on only one.
+
+## Business Questions
+
+These are the questions I'm trying to answer during the project.
+
+* Which genres receive the highest review scores?
+* Does price affect player satisfaction?
+* Which genres have the highest player engagement?
+* Do free games perform differently than paid games?
+* What do the most successful games have in common?
+* Are there any hidden gems with great reviews but relatively few owners?
+
 ## Methodology
 
-### Data Loading & Cleaning
+### Data Cleaning
 
-* Loaded the March 2025 Steam Games dataset.
-* Renamed and standardized column names.
+* Loaded the Steam dataset.
+* Renamed columns to make them easier to work with.
 * Removed duplicate records.
-* Converted dates and numeric columns into appropriate data types.
-* Selected the most relevant columns for analysis.
+* Converted dates and numeric columns.
+* Fixed missing and invalid review data.
 
-### Data Analysis
+### Analysis
 
-* Created price buckets for comparison.
-* Calculated estimated owner midpoints from owner ranges.
-* Grouped games by genre, release year, and price range.
-* Generated summary tables for further analysis.
+After cleaning the data, I'll compare games by genre, price, popularity, review scores, and player engagement. I'll also look for trends over time and see if there are any relationships between these variables.
 
-### Visualization
+### Visualizations
 
-* Steam game releases over time.
-* Top Steam genres by number of games.
-* Average review score by price range.
-* Price vs. review score.
-* Additional visualizations will be added as the project progresses.
+I'll create Python charts to explore the data and then build an interactive Tableau dashboard once the analysis is finished.
 
 ## Key Findings
 
-*This section will be updated as the analysis is completed.*
+This section will be updated as I work through the analysis.
 
 ## Business Recommendations
 
-*This section will be updated after the analysis is complete.*
+Recommendations will be added after the final analysis.
 
 ## Next Steps
 
-* Expand exploratory data analysis.
-* Perform SQL analysis to answer additional business questions.
-* Build an interactive Tableau dashboard.
-* Identify key characteristics shared by successful Steam games.
-* Finalize recommendations based on project findings.
+* Continue exploring the data.
+* Improve the Python visualizations.
+* Write SQL queries to answer the business questions.
+* Build a Tableau dashboard.
+* Summarize the final results.
 
 ## Dataset
 
@@ -57,29 +77,29 @@ Thousands of games are released on Steam every year, making it difficult for dev
 
 ## Tech Stack
 
-* Python – Data cleaning and analysis
-* Pandas – Data manipulation
-* Matplotlib – Data visualization
-* SQL *(planned)*
-* Tableau *(planned)*
+* Python
+* Pandas
+* Matplotlib
+* SQL *(coming soon)*
+* Tableau *(coming soon)*
 
 ## Screenshots
 
-*Visualizations will be added as the project progresses.*
+I'll add screenshots of the charts and dashboard once the project is finished.
 
 ## How to Run
 
 1. Clone the repository.
-2. Install dependencies:
+2. Install the required packages.
 
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Place the Steam dataset in the `data/raw` folder.
-4. Run the project:
+3. Place the Steam dataset inside the `data/raw` folder.
+
+4. Run the project.
 
 ```bash
 python main.py
 ```
-
